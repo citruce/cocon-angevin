@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Touristique à Angers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            opacity: 0.7;
+        }
+
+        .hero .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .description, .amenities, .reviews, .booking {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .description p, .amenities ul, .reviews p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .amenities ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .amenities ul li {
+            padding: 10px;
+            background-color: #f1f1f1;
+            margin-bottom: 10px;
+            border-left: 5px solid #4CAF50;
+        }
+
+        .reviews {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .reviews p {
+            font-style: italic;
+        }
+
+        .booking form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking input, .booking textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .booking input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .booking input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenue à Angers</h1>
+    <p>Découvrez notre charmant logement au cœur de la ville</p>
+</header>
+
+<nav>
+    <a href="#description">Description</a>
+    <a href="#amenities">Commodités</a>
+    <a href="#reviews">Avis</a>
+    <a href="#booking">Réservation</a>
+</nav>
+
+<section class="hero">
+    <img src="image_du_logement.jpg" alt="Image du logement">
+    <div class="hero-text">
+        <h1>Un séjour inoubliable à Angers</h1>
+        <p>Réservez dès maintenant votre prochaine escapade</p>
+    </div>
+</section>
+
+<div class="container">
+    <section id="description" class="description">
+        <h2>Description</h2>
+        <p>Ce magnifique appartement situé au cœur d'Angers vous offre un confort moderne avec une touche de charme historique. Parfait pour les couples ou les familles, il est à proximité des principales attractions de la ville, des restaurants, et des transports en commun.</p>
+    </section>
+
+    <section id="amenities" class="amenities">
+        <h2>Commodités</h2>
+        <ul>
+            <li>Wi-Fi gratuit</li>
+            <li>Climatisation</li>
+            <li>Cuisine entièrement équipée</li>
+            <li>Proche des transports en commun</li>
+            <li>Parking privé disponible</li>
+        </ul>
+    </section>
+
+    <section id="reviews" class="reviews">
+        <h2>Avis</h2>
+        <p>"Un endroit merveilleux, proche de tout. Nous avons adoré notre séjour!" - Sophie M.</p>
+        <p>"Appartement très propre et bien équipé. Je recommande vivement!" - Jean L.</p>
+    </section>
+
+    <section id="booking" class="booking">
+        <h2>Réservation</h2>
+        <form action="reservation.php" method="post">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="dates">Dates de séjour:</label>
+            <input type="text" id="dates" name="dates" placeholder="JJ/MM/AAAA - JJ/MM/AAAA" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Des questions ou des demandes spéciales ?"></textarea>
+
+            <input type="submit" value="Réserver">
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Location Angers. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
